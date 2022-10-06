@@ -1,10 +1,20 @@
 const ctx = document.getElementById('myChart').getContext('2d');
 
 const urlParams = new URLSearchParams(window.location.search);
-const win = urlParams.get ("w");
-const loss = urlParams.get ("l");
-const gale1 = urlParams.get ("g1");
-const gale2 = urlParams.get ("g2");
+const database = urlParams.get ("w");
+
+const url= new URLSearchParams(window.location.search);
+const win = url.get ("w");
+
+const urlP = new URLSearchParams(window.location.search);
+const loss = urlP.get ("l");
+
+const Params = new URLSearchParams(window.location.search);
+const gale1 = Params.get ("g1");
+
+const ams = new URLSearchParams(window.location.search);
+const gale2 = ams.get ("g2");
+
 const myChart = new Chart(ctx, {
 
     type: 'line',
